@@ -42,7 +42,7 @@ func main() {
 	httpServerExitDone.Add(1)
 	srv := startHttpServer(httpServerExitDone)
 
-	log.Printf("main: serving for 10 seconds")
+	log.Printf("main: serving for 30 seconds")
 
 	time.Sleep(30 * time.Second)
 
