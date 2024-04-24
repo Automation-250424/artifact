@@ -14,7 +14,7 @@ import (
 )
 
 func startHttpServer(wg *sync.WaitGroup) *http.Server {
-	srv := &http.Server{Addr: ":11000"}
+	srv := &http.Server{Addr: ":8080"}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
@@ -44,7 +44,7 @@ func main() {
 
 	log.Printf("main: serving for 10 seconds")
 
-	time.Sleep(10 * time.Second)
+	time.Sleep(30 * time.Second)
 
 	log.Printf("main: stopping HTTP server")
 
